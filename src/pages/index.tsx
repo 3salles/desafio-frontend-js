@@ -16,7 +16,6 @@ export default function Home() {
 
         <div className="flex-1">
           <div className="relative">
-
             <Header className="absolute z-10 px-5 sm:px-8 xl:px-16 items-center"/>
           </div>
         </div>
