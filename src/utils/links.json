@@ -1,22 +1,27 @@
 [
   {
+    "icon": "home",
     "title": "Home",
     "url": "/"
   },
   {
+    "icon": "bookmark",
     "title": "Minha Lista",
     "url": "/user/list"
   },
   {
+    "icon": "cobrowsing",
     "title": "Navegar",
     "url": "/explore"
   },
   {
+    "icon": "grid_squares",
     "title": "Categorias",
     "url": "/categories"
   },
   {
+    "icon": "materials",
     "title": "Materiais",
-    "url": "/material"
+    "url": "/materials"
   }
 ]

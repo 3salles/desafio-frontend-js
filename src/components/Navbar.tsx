@@ -1,22 +1,23 @@
-import { Fragment, ReactNode } from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindcss from '../../tailwind.config'
+
+import Icon , { iconName } from './Icon'
 
 
 interface Links {
+  icon: iconName
   title: string
   url: string
 }
 
-
-
 interface NavbarProps {
-  // children: ReactNode;
   links: Links[]
 }
 
-
-
+const defaultConfig = resolveConfig(tailwindcss)
 
 export default function Navbar({ links }: NavbarProps) {
   const { pathname } = useRouter()
@@ -34,6 +35,11 @@ export default function Navbar({ links }: NavbarProps) {
                 'flex flex-col items-center rounded p-1 lg:bg-transparent' +
                 (link.url === pathname ? 'bg-action-50' : '')
               }>
+                <Icon
+                  className="lg-hidden"
+                  color={link.url === pathname ? defaultConfig.theme.colors.action[600] : defaultConfig.theme.colors.grey[500]}
+                  name={link.icon}
+                />
                 <span className={
                   'min-w-55 w-full text-center text-xs whitespace-nowrap leading-4 mt-0.5 lg:text-sm lg:text-left lg:mt-0 ' +
                   (link.url === pathname ? 'text-action-600 ' : 'text-grey-500 ')
