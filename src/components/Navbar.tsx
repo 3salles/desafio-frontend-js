@@ -85,6 +85,12 @@ export default function Navbar({ links }: NavbarProps) {
               <Link href={link.url}>
                 <a className='hidden lg:flex items-center mt-1 ml-4.5 text-xs text-action-600'>
                   Ver todas
+                  <Icon
+                    className="ml-1"
+                    size={16}
+                    color={defaultConfig.theme.colors.action[600]}
+                    name="arrow-right"
+                  />
                 </a>
               </Link>
             )}
