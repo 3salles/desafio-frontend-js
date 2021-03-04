@@ -35,15 +35,25 @@ export default function Header({ className }: ClassName) {
             size={24}
           />
         </button>
-        <button></button>
-        <button></button>
+        <button className="hidden lg:block">
+          <Icon
+          name="help"
+          size={24}
+          />
+        </button>
+        <button className="hidden lg:block">
+          <Icon
+          name="notification"
+          size={24}
+          />
+        </button>
         <button className="flex w-6 h-6 xs:h-8 xs:w-8 relative">
           <Image
             className="rounded-full"
             src="/assets/profile-icon.png"
             layout="fill"
           />
-          <div className="absolute top-3 left-4 h-2 w-2 my-1 border-2 border-transparent rounded-full bg-orange-700 z-2"></div>
+          <div className="absolute sm:top-3 sm:left-4 sm:h-2 sm:w-2 my-1 border-2 border-transparent rounded-full bg-orange-700 z-2"></div>
         </button>
       </div>
     </header>
