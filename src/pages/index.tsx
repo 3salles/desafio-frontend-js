@@ -7,8 +7,9 @@ export default function Home() {
       <Head>
         <title>MOBRJ</title>
       </Head>
-
+    <main>
     <h1>MOBRJ</h1>
+    </main>
     </div>
   )
 }
