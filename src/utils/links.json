@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Home",
+    "url": "/"
+  },
+  {
+    "title": "Minha Lista",
+    "url": "/user/list"
+  },
+  {
+    "title": "Navegar",
+    "url": "/explore"
+  },
+  {
+    "title": "Categorias",
+    "url": "/categories"
+  },
+  {
+    "title": "Materiais",
+    "url": "/material"
+  }
+]
