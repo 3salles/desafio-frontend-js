@@ -7,21 +7,65 @@
   {
     "icon": "bookmark",
     "title": "Minha Lista",
-    "url": "/user/list"
+    "url": "/list"
   },
   {
     "icon": "cobrowsing",
     "title": "Navegar",
-    "url": "/explore"
+    "url": "/explore",
+    "subOptions": [{
+      "title": "Treinamentos",
+      "url": "/explore/trainings"
+    },
+    {
+      "title": "Trilhas",
+      "url": "/explore/trails"
+    },
+    {
+      "title": "Podcasts",
+      "url": "/explore/podcasts"
+    }
+  ]
+},
+{
+  "icon": "grid_squares",
+  "title": "Categorias",
+  "url": "/categories",
+  "subOptions": [{
+    "title": "Ferramentas e Sistemas",
+    "url": "/categories/tools-and-systems"
   },
   {
-    "icon": "grid_squares",
-    "title": "Categorias",
-    "url": "/categories"
+    "title": "Gestão Estratégica",
+    "url": "/categories/strategic-management"
   },
   {
-    "icon": "materials",
-    "title": "Materiais",
-    "url": "/materials"
+    "title": "Products",
+    "url": "/categories/products"
+  },
+  {
+    "title": "Ver mais",
+    "url": "/categories/others"
   }
+]
+},
+{
+  "icon": "materials",
+  "title": "Materiais",
+  "othertitle": "Materias de Apoio",
+  "url": "/materials",
+  "subOptions": [{
+    "title": "Ferramentas",
+    "url": "/materials/tools"
+  },
+  {
+    "title": "Biblioteca",
+    "url": "/materials/library"
+  },
+  {
+    "title": "Anotações",
+    "url": "/materials/annotations"
+  }
+]
+}
 ]
