@@ -68,7 +68,7 @@ module.exports = {
       },
       opaque: {
         900: '#001A27'
-      }
+      },
     },
     boxShadow: {
       sm: '0px 2px 11px -5px rgba(0, 0, 0, 0.25)',
