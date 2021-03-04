@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import navbarLinks from '../utils/links.json'
-import icons from '../utils/icons'
 
 
 export default function Home() {
