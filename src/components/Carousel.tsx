@@ -30,8 +30,8 @@ const defaultDots: DotsType = {
 
 const defaultArrows: ArrowsType = {
   show: false,
-  nextArrow: () => <Icon name="arrow-right-slim" />,
-  prevArrow: () => <Icon name="arrow-left-slim" />
+  nextArrow: () => <Icon name="arrow-right-slider" />,
+  prevArrow: () => <Icon name="arrow-left-slider" />
 }
 
 export default function Carousel ({
