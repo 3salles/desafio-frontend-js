@@ -4,6 +4,7 @@ import MainCarouselItem from '../components/MainCarouselItem'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import navbarLinks from '../utils/links.json'
+import Trending from '../components/Trending'
 
 
 
@@ -38,6 +39,11 @@ export default function Home() {
               <MainCarouselItem />
             </Carousel>
           </div>
+          <main>
+            <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between pt-4 pb-6 md:pt-10">
+              <Trending />
+            </div>
+          </main>
 
 
         </div>
