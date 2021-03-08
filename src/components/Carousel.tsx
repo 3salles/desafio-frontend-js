@@ -46,12 +46,12 @@ export default function Carousel ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    mounted (s) {
+    mounted (slide) {
       setLoaded(true)
     },
-    slideChanged (s) {
+    slideChanged (slide) {
       if (dots.show) {
-        setCurrentSlide(s.details().relativeSlide)
+        setCurrentSlide(slide.details().relativeSlide)
       }
     },
     ...options
@@ -97,11 +97,11 @@ export default function Carousel ({
 
       {slider && dots.show && (
         <div className="flex absolute space-x-4 dots">
-          {Array.from(Array(slider?.details().size).keys()).map(i => (
+          {Array.from(Array(slider?.details().size).keys()).map(index => (
             <button
-              key={i}
-              onClick={() => slider.moveToSlideRelative(i)}
-              className={'focus:outline-none rounded-full w-2.5 h-2.5' + (currentSlide === i ? ' bg-base-white' : ' border-2 border-base-white')}
+              key={index}
+              onClick={() => slider.moveToSlideRelative(index)}
+              className={'focus:outline-none rounded-full w-2.5 h-2.5' + (currentSlide === index ? ' bg-base-white' : ' border-2 border-base-white')}
             />
           ))}
         </div>
