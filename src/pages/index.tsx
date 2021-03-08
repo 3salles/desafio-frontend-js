@@ -7,7 +7,7 @@ import navbarLinks from '../utils/links.json'
 
 
 
-export default function Home () {
+export default function Home() {
   return (
     <>
       <Head>
@@ -15,10 +15,10 @@ export default function Home () {
       </Head>
 
       <div className="3xl:container mx-auto pb-16 lg:pb-0 lg:flex">
-        <Navbar links={navbarLinks}/>
+        <Navbar links={navbarLinks} />
         <div className="flex-1">
           <div className="relative">
-            {/* <Header className="absolute z-10 px-5 sm:px-8 xl:px-16 items-center"/> */}
+            <Header className="absolute z-10 px-5 sm:px-8 xl:px-16 items-center" />
             <Carousel
               slideHeightClass="h-74 lg:h-84"
               arrows={{
@@ -33,9 +33,9 @@ export default function Home () {
                 duration: 1000
               }}
             >
-              <MainCarouselItem/>
-              <MainCarouselItem/>
-              <MainCarouselItem/>
+              <MainCarouselItem />
+              <MainCarouselItem />
+              <MainCarouselItem />
             </Carousel>
           </div>
 
