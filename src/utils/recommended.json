@@ -1,0 +1,30 @@
+[
+  {
+    "avaregeTime":  4,
+    "icon_name": "videos",
+    "category": "Produtos",
+    "metric":"10:45",
+    "image": "/assets/man.png",
+    "tag": "confidencial",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "percentage": 60
+  },
+  {
+    "avaregeTime":  8,
+    "icon_name": "videos",
+    "category": "Produtos",
+    "metric":"13:20",
+    "image": "/assets/journalist.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "percentage": 37
+  },
+  {
+    "icon_name": "slides",
+    "category": "Produtos",
+    "metric":"12 slides",
+    "image": "/assets/grains.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e"
+  }
+]
