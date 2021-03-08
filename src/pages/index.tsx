@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Carousel from '../components/Carousel'
-import CarouselItem from '../components/CarouselItem'
+import MainCarouselItem from '../components/MainCarouselItem'
 import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import navbarLinks from '../utils/links.json'
@@ -29,12 +29,13 @@ export default function Home () {
               }}
               options={{
                 rubberband: false,
-                loop: false
+                loop: true,
+                duration: 1000
               }}
             >
-              <CarouselItem />
-              <CarouselItem />
-              <CarouselItem />
+              <MainCarouselItem/>
+              <MainCarouselItem/>
+              <MainCarouselItem/>
             </Carousel>
           </div>
 
