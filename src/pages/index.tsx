@@ -58,7 +58,9 @@ export default function Home() {
               <Card cardContent={recommended}/>
               </div>
 
-
+              <button className="text-action-600 text-sm w-full leading-6 mt-8">
+                Ver mais
+              </button>
             </section>
           </main>
 
