@@ -54,6 +54,7 @@ export default function Header({ className }: ClassName) {
             src="/assets/profile-icon.png"
             layout="fill"
           />
+          <div className="absolute h-2 w-2 top-4 left-4 lg:top-4 lg:left-5 lg:h-3 lg:w-3 lg:my-1  border-2 border-transparent rounded-full bg-orange-700 "></div>
         </button>
       </div>
     </header>
