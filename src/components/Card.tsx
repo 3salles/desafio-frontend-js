@@ -14,26 +14,33 @@ interface CardContent {
   category: string
   averageTime?: number
   percentage?: number
+  card_class?: string
 }
 interface CardProps {
   cardContent: CardContent[]
-  className?: string
 }
 
 const defaultConfig = resolveConfig(tailwindConfig)
 
-export default function Card ({ cardContent, className}: CardProps) {
-  const tagClass = (cardContent.tag === "confidencial" ? "text-orange-500" : "text-success-500")
-
+export default function Card ({ cardContent }: CardProps) {
   return (
+
     <>
     {cardContent.map((content) => (
-      <div className={className}>
+      <div className={content.card_class} >
       <Link href="/post">
         <a className="relative w-full flex flex-col">
-          <span className={'xs:hidden opacity-80 rounded-br rounded-tl absolute top-0 left-0 z-10 px-4 bg-base-white uppercase text-xs tracking-wider ' + tagClass}>
+          {content.tag === "confidencial" ?
+          (<span className={'xs:hidden opacity-80 rounded-br rounded-tl absolute top-0 left-0 z-10 px-4 bg-base-white uppercase text-xs tracking-wider text-orange-500'}>
+          {content.tag}
+          </span>) : (
+            <span className={'xs:hidden opacity-80 rounded-br rounded-tl absolute top-0 left-0 z-10 px-4 bg-base-white uppercase text-xs tracking-wider text-success-500'}>
             {content.tag}
           </span>
+          )
+
+          }
+
           <Image
           className="rounded"
           layout="responsive"

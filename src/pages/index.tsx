@@ -6,7 +6,6 @@ import Navbar from '../components/Navbar'
 import navbarLinks from '../utils/links.json'
 import Trending from '../components/Trending'
 import Card from '../components/Card'
-import Icon from '../components/Icon'
 import recommended from '../utils/recommended.json'
 
 
@@ -14,6 +13,7 @@ import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 
 const defaultConfig = resolveConfig(tailwindConfig)
+
 
 export default function Home() {
   return (
@@ -54,11 +54,10 @@ export default function Home() {
             </div>
 
             <section className="px-5 sm:px-8 pb-8">
-              <div className=" grid grid-cols-1 gap-y-6 gap-x-4">
-              <Card cardContent={recommended}/>
+              <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
+              <Card cardContent={recommended} />
               </div>
-
-              <button className="text-action-600 text-sm w-full leading-6 mt-8">
+              <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
                 Ver mais
               </button>
             </section>
