@@ -67,7 +67,7 @@ export default function Home() {
                 Ver mais
               </button>
             </section>
-            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10">
+            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10 xl:pl-16">
               <h2 className="text-grey-800 text-lg mb-6">Conteúdos especiais</h2>
               <Carousel
                 slideHeightClass="h-66"
