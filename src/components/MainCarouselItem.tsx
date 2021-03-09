@@ -1,4 +1,3 @@
-
 export default function MainCarouselItem() {
   return (
     <div className="h-74 lg:h-84 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url("./assets/carousel-image.png")` }}>

@@ -9,8 +9,14 @@ import Card from '../components/Card'
 import recommended from '../utils/recommended.json'
 
 
+
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
+import CarouselItem1 from '../components/CarouselItem1'
+import CarouselItem2 from '../components/CarouselItem2'
+import CarouselItem3 from '../components/CarouselItem3'
+import CarouselItem4 from '../components/CarouselItem4'
+
 
 const defaultConfig = resolveConfig(tailwindConfig)
 
@@ -38,12 +44,12 @@ export default function Home() {
               options={{
                 rubberband: false,
                 loop: true,
-                duration: 1000
               }}
             >
               <MainCarouselItem />
               <MainCarouselItem />
               <MainCarouselItem />
+
             </Carousel>
           </div>
           <main>
@@ -60,6 +66,34 @@ export default function Home() {
               <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
                 Ver mais
               </button>
+            </section>
+            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10">
+              <h2 className="text-grey-800 text-lg mb-6">Conteúdos especiais</h2>
+              <Carousel
+                slideHeightClass="h-66"
+                options={{
+                  spacing: 16,
+                  slidesPerView: 1.4,
+                  loop: false,
+                  rubberband: false,
+                  breakpoints: {
+                    '(min-width: 1025px)': {
+                      slidesPerView: 2.25
+                    },
+                    '(min-width: 1441px)': {
+                      slidesPerView: 3.25
+                    },
+                    '(min-width: 1536px)': {
+                      slidesPerView: 4.25
+                    }
+                  }
+                }}
+              >
+                <CarouselItem1 />
+                <CarouselItem2 />
+                <CarouselItem3 />
+                <CarouselItem4 />
+              </Carousel>
             </section>
           </main>
 
