@@ -102,10 +102,12 @@ export default function Home() {
                 Você também pode gostar de:
               </h2>
 
-              <div className="grid grid-cols-1 gap-y-6 gap-x-4">
+              <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
                 <Card cardContent={suggestions} />
               </div>
-
+              <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
+                Ver mais
+              </button>
             </section>
           </main>
 
