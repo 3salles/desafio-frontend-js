@@ -7,6 +7,7 @@ import navbarLinks from '../utils/links.json'
 import Trending from '../components/Trending'
 import Card from '../components/Card'
 import recommended from '../utils/recommended.json'
+import suggestions from '../utils/suggestions.json'
 
 
 
@@ -94,6 +95,17 @@ export default function Home() {
                 <CarouselItem3 />
                 <CarouselItem4 />
               </Carousel>
+            </section>
+
+            <section className="px-5 py-8 sm:px-8">
+              <h2 className="text-grey-800 text-lg mb-6">
+                Você também pode gostar de:
+              </h2>
+
+              <div className="grid grid-cols-1 gap-y-6 gap-x-4">
+                <Card cardContent={suggestions} />
+              </div>
+
             </section>
           </main>
 
