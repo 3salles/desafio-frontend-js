@@ -1,0 +1,114 @@
+[
+  {
+    "icon_name": "videos",
+    "category": "Seguro Auto",
+    "metric":"10:45",
+    "image": "/assets/car.png",
+    "tag": "confidencial",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "icon_name": "slides",
+    "category": "Contact Center",
+    "metric":"12 slides",
+    "image": "/assets/strategies.png",
+    "tag": "confidencial",
+    "title": "Sed dignissim tincidunt diam, vitae varius erat faucibus ac. Sed sagittis magna diam, molestie posuere tortor eleifend a",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "icon_name": "slides",
+    "category": "Estratégia e Modelo de Negócios",
+    "metric":"16 slides",
+    "image": "/assets/showing.png",
+    "tag": "confidencial",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "icon_name": "videos",
+    "category": "Ferramentas e Sistemas",
+    "metric":"10:45",
+    "image": "/assets/numbers.png",
+    "tag": "confidencial",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "avaregeTime":  4,
+    "icon_name": "videos",
+    "category": "Produtos",
+    "metric":"10:45",
+    "image": "/assets/man.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "percentage": 60
+  },
+  {
+    "avaregeTime":  8,
+    "icon_name": "videos",
+    "category": "Contact Center",
+    "metric":"13:20",
+    "image": "/assets/journalist.png",
+    "tag": "confidencial",
+    "title": "Sed dignissim tincidunt diam, vitae varius erat faucibus ac. Sed sagittis magna diam, molestie posuere tortor eleifend a",
+    "percentage": 37
+  },
+  {
+    "icon_name": "slides",
+    "category": "Estratégia e Modelo de Negócio",
+    "metric":"12 slides",
+    "image": "/assets/grains.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e"
+  },
+  {
+    "icon_name": "podcasts",
+    "category": "Ferramentas e Sistemas",
+    "metric":"14:35",
+    "image": "/assets/conference-call.png",
+    "tag": "confidencial",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "avaregeTime":  5,
+    "icon_name": "videos",
+    "category": "Tecnologia da Informação",
+    "metric":"10:45",
+    "image": "/assets/laptop.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "avaregeTime":  5,
+    "icon_name": "articles",
+    "category": "Recursos Humanos",
+    "metric":"~ 5m",
+    "image": "/assets/children.png",
+    "tag": "interno",
+    "title": "Sed dignissim tincidunt diam, vitae varius erat faucibus ac. Sed sagittis magna diam, molestie posuere tortor eleifend a",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "icon_name": "slides",
+    "category": "Ferramentas e Sistemas",
+    "metric":"16 slides",
+    "image": "/assets/planning.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  },
+  {
+    "avaregeTime":  3,
+    "icon_name": "podcasts",
+    "category": "Compliance",
+    "metric":"36:28",
+    "image": "/assets/speaking.png",
+    "tag": "interno",
+    "title": "Lorem ipsum dolor sit amet, consectetuer adipiscing e",
+    "card_class": "hidden xs:block"
+  }
+]
