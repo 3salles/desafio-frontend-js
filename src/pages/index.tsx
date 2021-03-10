@@ -17,6 +17,7 @@ import CarouselItem1 from '../components/CarouselItem1'
 import CarouselItem2 from '../components/CarouselItem2'
 import CarouselItem3 from '../components/CarouselItem3'
 import CarouselItem4 from '../components/CarouselItem4'
+import SearchBox from '../components/Searchbox'
 
 
 const defaultConfig = resolveConfig(tailwindConfig)
@@ -57,10 +58,10 @@ export default function Home() {
             <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between pt-4 pb-6 md:pt-10">
               <Trending />
               <hr className="w-full border-grey-300 md:hidden" />
-              <h2 className="px-5 sm:px-8 text-grey-800 text-lg mt-8"> Recomendados</h2>
+              <h2 className="px-5 sm:px-8 xl:px-16 text-grey-800 text-lg mt-8 md:m-0"> Recomendados</h2>
             </div>
 
-            <section className="px-5 sm:px-8 pb-8">
+            <section className="px-5 sm:px-8 xl:px-16 pb-8 md:pb-10">
               <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
               <Card cardContent={recommended} />
               </div>
@@ -97,7 +98,7 @@ export default function Home() {
               </Carousel>
             </section>
 
-            <section className="px-5 py-8 sm:px-8">
+            <section className="px-5 py-8 sm:px-8 md:py-10 xl:px-16">
               <h2 className="text-grey-800 text-lg mb-6">
                 Você também pode gostar de:
               </h2>
@@ -108,6 +109,9 @@ export default function Home() {
               <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
                 Ver mais
               </button>
+            </section>
+            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10 xl:pl-16">
+              <SearchBox />
             </section>
           </main>
 
