@@ -16,7 +16,8 @@ export default function Trending () {
       </div>
       <div className="flex space-x-4">
         <button className="focus:outline-none flex items-center space-x-2">
-          <div className="flex items-center justify-center bg-gradient-to-r from-action-500 to-action-600 rounded-full w-6 h-6">
+          <div
+          className="flex items-center justify-center bg-gradient-to-r from-action-500 to-action-600 rounded-full w-6 h-6">
             <Icon
             size={14}
             name="videos"

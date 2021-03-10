@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 import Icon from "./Icon";
+import { motion } from 'framer-motion'
+import { useState } from "react";
 
 interface CardContent {
   image: string
@@ -27,7 +28,7 @@ export default function Card ({ cardContent }: CardProps) {
 
     <>
     {cardContent.map((content) => (
-      <div className={content.card_class} >
+      <motion.div className={content.card_class} whileHover={{scale: 1.1}} whileTap={{ scale: 0.9 }}>
       <Link href="/post">
         <a className="relative w-full flex flex-col">
           {content.tag === "confidencial" ?
@@ -86,7 +87,7 @@ export default function Card ({ cardContent }: CardProps) {
           </>
         )}
       </div>
-    </div>
+    </motion.div>
     ))}
 </>
 
