@@ -27,15 +27,15 @@ export default function SearchBox (){
           <span className="pr-1 pl-2">Auditoria</span>
           <span className="pr-2">Interna</span>
         </button>
-        <button className="hidden lg:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
+        <button className="hidden lg:block md:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
           <span className="pr-1 pl-2">ABBA</span>
         </button>
-        <button className="hidden lg:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
+        <button className="hidden lg:block md:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
           <span className="pr-1 pl-2">Sinistros</span>
         </button>
       </div>
 
-      <form className="lg:flex ">
+      <form className="lg:flex">
         <SearchInput className="w-full" color={defaultConfig.theme.colors.grey[500]} placeholder="Ou procure por novas ideias..."/>
         <button type="submit" className="my-3 p-1 w-60 rounded text-base-white bg-gradient-to-r from-action-500 to-action-600">
           Buscar
