@@ -110,7 +110,7 @@ export default function Home() {
                 Ver mais
               </button>
             </section>
-            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10 xl:pl-16">
+            <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 sm:py-8 pl-5 sm:w-full sm:pl-8 md:py-10 xl:pl-16">
               <SearchBox />
             </section>
           </main>

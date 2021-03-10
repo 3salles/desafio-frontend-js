@@ -6,7 +6,7 @@ const defaultConfig = resolveConfig(tailwind)
 
 export default function SearchBox (){
   return (
-    <section className="p-2 text-center">
+    <section className="lg:px-60 sm:p-3 text-center">
       <span className="text-grey-800 text-sm">
         Ainda não sabe o que assistir?
       </span>
@@ -14,7 +14,7 @@ export default function SearchBox (){
         Busque por suas categorias preferidas
       </p>
 
-      <div className="flex items-center justify-evenly text-brand-500 py-1">
+      <div className="flex items-center justify-evenly text-brand-500 py-1 max-w-sm">
         <button className="bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
           <span className="pr-1 pl-2">Seguro</span>
           <span className="pr-2">Auto</span>
@@ -27,9 +27,15 @@ export default function SearchBox (){
           <span className="pr-1 pl-2">Auditoria</span>
           <span className="pr-2">Interna</span>
         </button>
+        <button className="hidden lg:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
+          <span className="pr-1 pl-2">ABBA</span>
+        </button>
+        <button className="hidden lg:block bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
+          <span className="pr-1 pl-2">Sinistros</span>
+        </button>
       </div>
 
-      <form>
+      <form className="lg:flex ">
         <SearchInput className="w-full" color={defaultConfig.theme.colors.grey[500]} placeholder="Ou procure por novas ideias..."/>
         <button type="submit" className="my-3 p-1 w-60 rounded text-base-white bg-gradient-to-r from-action-500 to-action-600">
           Buscar
