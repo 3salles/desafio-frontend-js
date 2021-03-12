@@ -23,7 +23,7 @@ interface CarouselProps {
   arrows?: ArrowsType
   options?: TOptions
   slideHeightClass?: string
-  isLoading: true
+  isLoading?: true
 }
 
 const defaultDots: DotsType = {
