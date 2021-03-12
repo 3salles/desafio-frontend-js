@@ -1,4 +1,4 @@
-import Icon, { iconName } from "./Icon";
+import Icon, { iconName } from "../Icon";
 
 interface SearchInputProps {
   placeholder: string

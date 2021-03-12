@@ -1,6 +1,6 @@
-import SearchInput from "./SearchInput";
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwind from '../../tailwind.config'
+import tailwind from '../../../tailwind.config'
+import SearchInput from '../SearchInput'
 
 const defaultConfig = resolveConfig(tailwind)
 
