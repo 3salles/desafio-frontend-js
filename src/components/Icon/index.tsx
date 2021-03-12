@@ -1,6 +1,6 @@
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from '../../tailwind.config'
-import { icons } from '../utils/icons'
+import tailwindConfig from '../../../tailwind.config'
+import { icons } from '../../utils/icons'
 
 const defaultConfig = resolveConfig(tailwindConfig)
 

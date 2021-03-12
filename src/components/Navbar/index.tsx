@@ -2,9 +2,9 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindcss from '../../tailwind.config'
+import tailwindcss from '../../../tailwind.config'
 
-import Icon , { iconName } from './Icon'
+import Icon , { iconName } from '../Icon'
 
 
 interface Links {

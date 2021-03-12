@@ -1,11 +1,9 @@
 import { Children, FC, ReactNode, useRef, useState, useEffect } from 'react'
 import { TOptions } from 'keen-slider'
 import { useKeenSlider } from 'keen-slider/react'
-import Icon from './Icon'
+import Icon from '../Icon'
 
 import "keen-slider/keen-slider.min.css"
-import LoadingCarousel from './Shimmer/LoadingCarousel'
-
 
 interface ArrowsType {
   show: boolean
@@ -76,7 +74,6 @@ export default function Carousel ({
           </div>
         ))}
       </div>
-
       {slider && arrows.show && (
         <>
           {currentSlide > 0 && (
@@ -97,7 +94,6 @@ export default function Carousel ({
           )}
         </>
       )}
-
       {slider && dots.show && (
         <div className="flex absolute space-x-4 dots">
           {Array.from(Array(slider?.details().size).keys()).map(index => (
@@ -110,6 +106,5 @@ export default function Carousel ({
         </div>
       )}
     </div>
-
   )
 }

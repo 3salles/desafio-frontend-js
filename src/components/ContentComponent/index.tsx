@@ -5,16 +5,17 @@ import MainCarouselItem from '../../components/MainCarouselItem'
 import Header from '../../components/Header'
 import Navbar from '../../components/Navbar'
 import navbarLinks from '../../utils/links.json'
-import Trending from '../../components/Trending'
-import Card from '../../components/Card'
+import Icon from '../Icon'
+import Trending from '../Trending'
+import CarouselItem1 from '../CarouselItems/CarouselItem1'
+import CarouselItem2 from '../CarouselItems/CarouselItem2'
+import CarouselItem3 from '../CarouselItems/CarouselItem3'
+import CarouselItem4 from '../CarouselItems/CarouselItem4'
+import SearchBox from '../SearchBox'
 import recommended from '../../utils/recommended.json'
 import suggestions from '../../utils/suggestions.json'
-import CarouselItem1 from '../CarouselItem1'
-import CarouselItem2 from '../CarouselItem2'
-import CarouselItem3 from '../CarouselItem3'
-import CarouselItem4 from '../CarouselItem4'
-import SearchBox from '../Searchbox'
-import Icon from '../Icon'
+import CardComponent from '../CardComponent'
+
 
 const defaultConfig = resolveConfig(tailwindConfig)
 
@@ -53,7 +54,7 @@ export default function ContentComponent() {
 
           <section className="px-5 sm:px-8 xl:px-16 pb-8 md:pb-10">
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
-              <Card cardContent={recommended} />
+              <CardComponent cardContent={recommended} />
             </div>
             <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
               Ver mais
@@ -92,7 +93,7 @@ export default function ContentComponent() {
               Você também pode gostar de:
                   </h2>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
-              <Card cardContent={suggestions} />
+              <CardComponent cardContent={suggestions} />
             </div>
             <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
               Ver mais
@@ -106,7 +107,7 @@ export default function ContentComponent() {
               Veja também
                   </h2>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
-              <Card cardContent={suggestions} />
+              <CardComponent cardContent={suggestions} />
             </div>
             <button className="text-sm mt-8 ml-40 xs:hidden">
               <Icon
