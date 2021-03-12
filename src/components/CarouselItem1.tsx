@@ -1,4 +1,4 @@
-export default function SecondCarousel1() {
+export default function CarouselItem1() {
   return (
     <div
       className="rounded relative h-66 bg-center bg-no-repeat bg-cover"
