@@ -1,12 +1,21 @@
 import Icon from "./Icon";
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
+import LoadingTrending from '../components/Shimmer/LoadingTrending'
 
 const defaultConfig = resolveConfig(tailwindConfig)
 
-export default function Trending () {
+interface TrendingProps {
+  isLoading: boolean
+}
+
+export default function Trending ({ isLoading }: TrendingProps) {
   return(
-    <div className="flex space-x-6 pb-4 md:pb-0 w-full md:w-max px-5 sm:px-8">
+    <>
+    {isLoading ? (
+      <LoadingTrending />
+    ) : (
+      <div className="flex space-x-6 pb-4 md:pb-0 w-full md:w-max px-5 sm:px-8">
       <div className="flex space-x2">
         <Icon
         color={defaultConfig.theme.colors.action[500]}
@@ -57,5 +66,9 @@ export default function Trending () {
         </button>
       </div>
     </div>
+    )}
+    </>
+
+
   )
 }
