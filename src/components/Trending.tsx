@@ -6,7 +6,7 @@ import LoadingTrending from '../components/Shimmer/LoadingTrending'
 const defaultConfig = resolveConfig(tailwindConfig)
 
 interface TrendingProps {
-  isLoading: boolean
+  isLoading?: boolean
 }
 
 export default function Trending ({ isLoading }: TrendingProps) {
