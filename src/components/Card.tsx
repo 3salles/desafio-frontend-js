@@ -33,8 +33,8 @@ export default function Card ({ cardContent, isLoading }: CardProps) {
         <>
         {isLoading ? (
           <div className={content.card_class}>
-            <div className="bg-grey-300 h-40 rounded animate-pulse" />
-            <div className="bg-grey-50 p-8 animate-pulse shadow-sm flex flex-col space-y-2">
+            <div className="bg-grey-300 h-40 rounded animate-pulse shadow-sm" />
+            <div className="bg-grey-50 p-8  flex flex-col space-y-2 animate-pulse">
               <span className="bg-grey-500 p-1 w-full rounded" />
               <span className="bg-grey-500 p-1 w-1/4 rounded" />
             </div>
