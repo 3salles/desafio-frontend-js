@@ -3,7 +3,7 @@ import { TOptions } from 'keen-slider'
 import { useKeenSlider } from 'keen-slider/react'
 import Icon from '../Icon'
 
-import "keen-slider/keen-slider.min.css"
+import 'keen-slider/keen-slider.min.css'
 
 interface ArrowsType {
   show: boolean
@@ -33,30 +33,30 @@ const defaultArrows: ArrowsType = {
   prevArrow: () => <Icon name="arrow-left-slider" />
 }
 
-export default function Carousel ({
+export default function Carousel({
   children,
   dots = defaultDots,
   arrows = defaultArrows,
   slideHeightClass = '',
   options
-}: CarouselProps
-) {
-  const { nextArrow: NextArrow, prevArrow: PrevArrow } = { ...defaultArrows, ...arrows }
+}: CarouselProps) {
+  const { nextArrow: NextArrow, prevArrow: PrevArrow } = {
+    ...defaultArrows,
+    ...arrows
+  }
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-    mounted (slide) {
+    mounted(slide) {
       setLoaded(true)
     },
-    slideChanged (slide) {
+    slideChanged(slide) {
       if (dots.show) {
         setCurrentSlide(slide.details().relativeSlide)
       }
     },
     ...options
   })
-
-
 
   const childrenLength = Children.toArray(children).length
   const slideLenght = currentSlide + 1
@@ -68,7 +68,11 @@ export default function Carousel ({
           <div
             key={index}
             className="keen-slider__slide"
-            style={{ width: `calc(100% / ${options.slidesPerView as number || 1} - ${options.spacing / 2})` }}
+            style={{
+              width: `calc(100% / ${(options.slidesPerView as number) || 1} - ${
+                options.spacing / 2
+              })`
+            }}
           >
             {loaded && child}
           </div>
@@ -100,7 +104,12 @@ export default function Carousel ({
             <button
               key={index}
               onClick={() => slider.moveToSlideRelative(index)}
-              className={'focus:outline-none rounded-full w-2.5 h-2.5' + (currentSlide === index ? ' bg-base-white' : ' border-2 border-base-white')}
+              className={
+                'focus:outline-none rounded-full w-2.5 h-2.5' +
+                (currentSlide === index
+                  ? ' bg-base-white'
+                  : ' border-2 border-base-white')
+              }
             />
           ))}
         </div>

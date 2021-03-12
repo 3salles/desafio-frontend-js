@@ -16,7 +16,6 @@ import recommended from '../../utils/recommended.json'
 import suggestions from '../../utils/suggestions.json'
 import CardComponent from '../CardComponent'
 
-
 const defaultConfig = resolveConfig(tailwindConfig)
 
 export default function ContentComponent() {
@@ -36,20 +35,22 @@ export default function ContentComponent() {
             }}
             options={{
               rubberband: false,
-              loop: true,
+              loop: true
             }}
           >
             <MainCarouselItem />
             <MainCarouselItem />
             <MainCarouselItem />
-
           </Carousel>
         </div>
         <main>
           <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between pt-4 pb-6 md:pt-10">
             <Trending />
             <hr className="w-full border-grey-300 md:hidden" />
-            <h2 className="px-5 sm:px-8 xl:px-16 text-grey-800 text-lg mt-8 md:m-0"> Recomendados</h2>
+            <h2 className="px-5 sm:px-8 xl:px-16 text-grey-800 text-lg mt-8 md:m-0">
+              {' '}
+              Recomendados
+            </h2>
           </div>
 
           <section className="px-5 sm:px-8 xl:px-16 pb-8 md:pb-10">
@@ -58,7 +59,7 @@ export default function ContentComponent() {
             </div>
             <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
               Ver mais
-                  </button>
+            </button>
           </section>
           <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 py-8 pl-5 w-full sm:pl-8 md:py-10 xl:pl-16">
             <h2 className="text-grey-800 text-lg mb-6">Conteúdos especiais</h2>
@@ -91,21 +92,19 @@ export default function ContentComponent() {
           <section className="px-5 py-8 sm:px-8 md:py-10 xl:px-16">
             <h2 className="text-grey-800 text-lg mb-6">
               Você também pode gostar de:
-                  </h2>
+            </h2>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
               <CardComponent cardContent={suggestions} />
             </div>
             <button className="text-action-600 text-sm w-full leading-6 xs:hidden mt-8">
               Ver mais
-                  </button>
+            </button>
           </section>
           <section className="bg-gradient-to-bl from-vibrant-50 to-vibrant-100 sm:py-8 pl-5 sm:w-full sm:pl-8 md:py-10 xl:pl-16">
             <SearchBox />
           </section>
           <section className="px-5 py-8 sm:px-8 md:py-10 xl:px-16">
-            <h2 className="text-grey-800 text-lg mb-6">
-              Veja também
-                  </h2>
+            <h2 className="text-grey-800 text-lg mb-6">Veja também</h2>
             <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 gap-y-6 gap-x-4">
               <CardComponent cardContent={suggestions} />
             </div>
@@ -113,7 +112,8 @@ export default function ContentComponent() {
               <Icon
                 name={'chevron-down'}
                 size={24}
-                color={defaultConfig.theme.colors.vibrant[500]} />
+                color={defaultConfig.theme.colors.vibrant[500]}
+              />
             </button>
           </section>
         </main>

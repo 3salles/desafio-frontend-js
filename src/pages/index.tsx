@@ -24,8 +24,8 @@ export default function Home() {
           <ShimmerComponent isLoading={isLoading} />
         </>
       ) : (
-          <ContentComponent />
-        )}
+        <ContentComponent />
+      )}
     </>
   )
 }
