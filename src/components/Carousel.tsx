@@ -4,6 +4,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import Icon from './Icon'
 
 import "keen-slider/keen-slider.min.css"
+import LoadingCarousel from './Shimmer/LoadingCarousel'
 
 
 interface ArrowsType {
@@ -22,6 +23,7 @@ interface CarouselProps {
   arrows?: ArrowsType
   options?: TOptions
   slideHeightClass?: string
+  isLoading: true
 }
 
 const defaultDots: DotsType = {
@@ -39,13 +41,13 @@ export default function Carousel ({
   dots = defaultDots,
   arrows = defaultArrows,
   slideHeightClass = '',
-  options
+  options,
+  isLoading
 }: CarouselProps
 ) {
   const { nextArrow: NextArrow, prevArrow: PrevArrow } = { ...defaultArrows, ...arrows }
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [pause, setPause] = useState(false)
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     mounted (slide) {
       setLoaded(true)
@@ -64,7 +66,11 @@ export default function Carousel ({
   const slideLenght = currentSlide + 1
 
   return (
-    <div className="relative w-full">
+    <>
+    {isLoading ? (
+      <LoadingCarousel />
+    ): (
+      <div className="relative w-full">
       <div ref={sliderRef} className={'keen-slider ' + slideHeightClass}>
         {Children.map(children, (child, index) => (
           <div
@@ -110,5 +116,8 @@ export default function Carousel ({
         </div>
       )}
     </div>
+    )}
+    </>
+
   )
 }

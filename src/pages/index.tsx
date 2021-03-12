@@ -19,12 +19,21 @@ import CarouselItem3 from '../components/CarouselItem3'
 import CarouselItem4 from '../components/CarouselItem4'
 import SearchBox from '../components/Searchbox'
 import Icon from '../components/Icon'
+import { useEffect, useState } from 'react'
 
 
 const defaultConfig = resolveConfig(tailwindConfig)
 
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      // setIsLoading(true)
+    }, 1000)
+  }, [])
+
   return (
     <>
       <Head>
@@ -35,8 +44,9 @@ export default function Home() {
         <Navbar links={navbarLinks} />
         <div className="flex-1">
           <div className="relative">
-            <Header className="absolute z-10 px-5 sm:px-8 xl:px-16 items-center" />
+            <Header isLoading={isLoading} className="absolute z-10 px-5 sm:px-8 xl:px-16 items-center" />
             <Carousel
+              isLoading={isLoading}
               slideHeightClass="h-74 lg:h-84"
               arrows={{
                 show: true
@@ -57,7 +67,7 @@ export default function Home() {
           </div>
           <main>
             <div className="flex flex-col md:flex-row-reverse md:items-center md:justify-between pt-4 pb-6 md:pt-10">
-              <Trending />
+              <Trending isLoading={isLoading}/>
               <hr className="w-full border-grey-300 md:hidden" />
               <h2 className="px-5 sm:px-8 xl:px-16 text-grey-800 text-lg mt-8 md:m-0"> Recomendados</h2>
             </div>
