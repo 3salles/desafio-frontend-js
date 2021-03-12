@@ -3,12 +3,13 @@ import Image from "next/image"
 import Icon from "./Icon";
 import SearchInput from "./SearchInput";
 
-interface ClassName {
+interface HeaderProps {
   className: string
 }
 
-export default function Header({ className }: ClassName) {
+export default function Header({ className }: HeaderProps) {
   return (
+    <>
     <header className={'flex pt-3 w-full justify-between ' + className}>
       <Link href="/">
         <a className="flex lg:hidden">
@@ -54,10 +55,12 @@ export default function Header({ className }: ClassName) {
             src="/assets/profile-icon.png"
             layout="fill"
           />
-          <div className="absolute h-2 w-2 top-4 left-4 lg:top-4 lg:left-5 lg:h-3 lg:w-3 lg:my-1  border-2 border-transparent rounded-full bg-orange-700 "></div>
+          <div className="absolute h-2 w-2 top-4 left-4 lg:top-4 lg:left-5 lg:h-3 lg:w-3 lg:my-1  border-2 border-transparent rounded-full bg-orange-700 ">
+          </div>
         </button>
       </div>
     </header>
+    </>
 
   )
 }

@@ -23,7 +23,6 @@ interface CarouselProps {
   arrows?: ArrowsType
   options?: TOptions
   slideHeightClass?: string
-  isLoading?: true
 }
 
 const defaultDots: DotsType = {
@@ -41,8 +40,7 @@ export default function Carousel ({
   dots = defaultDots,
   arrows = defaultArrows,
   slideHeightClass = '',
-  options,
-  isLoading
+  options
 }: CarouselProps
 ) {
   const { nextArrow: NextArrow, prevArrow: PrevArrow } = { ...defaultArrows, ...arrows }
@@ -66,11 +64,7 @@ export default function Carousel ({
   const slideLenght = currentSlide + 1
 
   return (
-    <>
-    {isLoading ? (
-      <LoadingCarousel />
-    ): (
-      <div className="relative w-full">
+    <div className="relative w-full">
       <div ref={sliderRef} className={'keen-slider ' + slideHeightClass}>
         {Children.map(children, (child, index) => (
           <div
@@ -116,8 +110,6 @@ export default function Carousel ({
         </div>
       )}
     </div>
-    )}
-    </>
 
   )
 }
