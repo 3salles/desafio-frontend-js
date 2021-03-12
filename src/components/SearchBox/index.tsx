@@ -4,15 +4,13 @@ import SearchInput from '../SearchInput'
 
 const defaultConfig = resolveConfig(tailwind)
 
-export default function SearchBox (){
+export default function SearchBox() {
   return (
     <section className="lg:px-60 sm:p-3 text-center">
       <span className="text-grey-800 text-sm">
         Ainda não sabe o que assistir?
       </span>
-      <p className="text-action-600">
-        Busque por suas categorias preferidas
-      </p>
+      <p className="text-action-600">Busque por suas categorias preferidas</p>
 
       <div className="flex items-center justify-evenly text-brand-500 py-1 max-w-sm">
         <button className="bg-transparent border border-solid border-brand-500  rounded-full outline-none focus:outline-none mr-1 mb-1">
@@ -36,8 +34,15 @@ export default function SearchBox (){
       </div>
 
       <form className="lg:flex">
-        <SearchInput className="w-full" color={defaultConfig.theme.colors.grey[500]} placeholder="Ou procure por novas ideias..."/>
-        <button type="submit" className="my-3 p-1 w-60 rounded text-base-white bg-gradient-to-r from-action-500 to-action-600">
+        <SearchInput
+          className="w-full"
+          color={defaultConfig.theme.colors.grey[500]}
+          placeholder="Ou procure por novas ideias..."
+        />
+        <button
+          type="submit"
+          className="my-3 p-1 w-60 rounded text-base-white bg-gradient-to-r from-action-500 to-action-600"
+        >
           Buscar
         </button>
       </form>

@@ -14,26 +14,27 @@ interface IconProps {
 }
 
 export default function Icon({
-  name, color = defaultConfig.theme.colors.base.white,
+  name,
+  color = defaultConfig.theme.colors.base.white,
   size = 24,
-  className = ''}: IconProps
-  ){
-    const noEvenood = ['videos']
+  className = ''
+}: IconProps) {
+  const noEvenood = ['videos']
   return (
     <svg
-    className={className}
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
       {icons[name].map((path, id) => (
         <path
-        fillRule={noEvenood.includes(name) ? 'nonzero' : 'evenodd'}
-        key={id}
-        d={path}
-        fill={color}
+          fillRule={noEvenood.includes(name) ? 'nonzero' : 'evenodd'}
+          key={id}
+          d={path}
+          fill={color}
         />
       ))}
     </svg>

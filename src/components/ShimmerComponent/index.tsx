@@ -1,16 +1,15 @@
-import LoadingCarousel from "../Shimmer/LoadingCarousel";
-import Trending from "../Trending";
-import CardComponent from "../CardComponent";
+import LoadingCarousel from '../Shimmer/LoadingCarousel'
+import Trending from '../Trending'
+import CardComponent from '../CardComponent'
 
 import recommended from '../../utils/recommended.json'
 import suggestions from '../../utils/suggestions.json'
-
 
 interface ShimmerComponentProps {
   isLoading: boolean
 }
 
-export default function ShimmerComponent({isLoading}: ShimmerComponentProps) {
+export default function ShimmerComponent({ isLoading }: ShimmerComponentProps) {
   return (
     <div className="3xl:container mx-auto pb-16 lg:pb-0 lg:flex">
       <div className="flex-1">
